@@ -1,0 +1,48 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f5f5f5;
+}
+
+.login-card {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1rem;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.login-button {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-button:hover {
+  background-color: #1565c0; /* azul más oscuro */
+  transform: translateY(-2px);
+  color: whitesmoke;
+}
+
+.sign-up {
+  text-align: start;
+  margin-top: 1rem;
+  color: #007f9c;
+  font-weight:  bold;
+}
+
+.sign-up:hover {
+  text-decoration: underline;
+  cursor: pointer;
+  color: #1565c0;
+}
+
+
+

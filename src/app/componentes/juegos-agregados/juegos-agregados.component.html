@@ -1,0 +1,42 @@
+<div class="juegos-agregados">
+  <div *ngIf="showAlert" class="alert-retro">{{ alertMessage }}</div>
+  <h5 class="title-h2">Agregar nuevos juegos</h5>
+
+    <mat-card
+      *ngFor="let game of games"
+      appearance="outlined"
+      style="background: rgba(21,101,192,0)"
+      class="car-add-game"
+    >
+      <div>
+        <img [src]="game.image" [alt]="game.title" class="img-game" />
+      </div>
+    <div>
+
+      <p class="title-game">{{ game.title }}</p>
+      <mat-card-content style="color: whitesmoke; font-size: small;">Fecha de estreno: {{game?.release_date}}</mat-card-content>
+      <mat-card-content style="color: whitesmoke; padding-bottom: 10px;">{{ game.description }}</mat-card-content>
+      <mat-card-content style="color: rgba(216,255,251,0.97); font-size: medium;" *ngIf="!game.coming_soon"> Numero de descargas: {{ game.downloads }}</mat-card-content>
+      <mat-card-content style="color: whitesmoke;" *ngIf="!game.coming_soon">
+        {{ game.rating }}
+        <mat-icon>stars</mat-icon>
+      </mat-card-content>
+    </div>
+
+      <div style="padding-top: 2rem">
+
+
+      <button
+        class="btn-retro"
+        (click)="buyGame(game.id)"
+      >Comprar</button>
+
+      <button
+        class="btn-retro-delete"
+        (click)="removeGame(game.id)"
+      >Eliminar</button>
+
+      </div>
+
+    </mat-card>
+</div>

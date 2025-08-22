@@ -1,0 +1,34 @@
+<div class="dashboard">
+  <h5 class="title-h2">Los juegos mas descargados</h5>
+
+  <div class="card-games">
+    <mat-card
+      *ngFor="let game of games"
+      appearance="outlined"
+      style="background: rgba(21,101,192,0)"
+      class="card-game-main"
+    >
+      <img [src]="game.image" [alt]="game.title" class="img-game" />
+      <p class="title-game">{{ game.title }}</p>
+      <mat-card-content style="color: whitesmoke; padding-bottom: 10px; font-size: small;">Fecha de estreno: {{game?.release_date}}</mat-card-content>
+      <mat-card-content style="color: whitesmoke; padding-bottom: 10px;">{{ game.description }}</mat-card-content>
+      <mat-card-content style="color: rgba(216,255,251,0.97); font-size: medium;" *ngIf="!game.coming_soon"> Numero de descargas: {{ game.downloads }}</mat-card-content>
+      <mat-card-content style="color: whitesmoke;" *ngIf="!game.coming_soon">
+        {{ game.rating }}
+        <mat-icon>stars</mat-icon>
+      </mat-card-content>
+      <mat-card-content
+        style="color: rgba(193,23,23,0.87); font-size: medium;  font-family: 'Press Start 2P', cursive;"
+        *ngIf="game.coming_soon"
+      >
+        Próximamente
+      </mat-card-content>
+      <button
+        class="btn-retro"
+        *ngIf="!game.coming_soon"
+        (click)="addGame(game)"
+      >Agregar</button>
+
+    </mat-card>
+  </div>
+</div>

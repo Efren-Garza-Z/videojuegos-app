@@ -1,0 +1,50 @@
+.navbar {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+  background: #001717;
+  background: linear-gradient(43deg,rgba(0, 23, 23, 1) 0%, rgba(15, 33, 38, 1) 50%, rgba(6, 32, 38, 1) 91%);
+  color: white;
+  border-bottom:  2px solid rgba(0, 0, 0, 0.14);
+  max-width: 100%;
+}
+
+.lista{
+  display: flex;
+  padding-right:  0.5rem;
+  margin-top: 10px;
+  text-after-overflow:  -o-ellipsis-lastline;
+}
+
+.btn-nav-sub {
+  font-weight: inherit;
+  font-size: 1rem;
+  color: rgba(232,232,232,0.87);
+  text-align: center;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+  cursor: pointer;
+}
+
+.btn-nav-sub:hover {
+  color: rgb(181, 181, 181);
+  text-align: center;
+  background-color: rgba(54, 64, 61, 0.2);
+  border-radius: 1.3rem;
+ }
+
+.salir {
+  font-size: 1.5rem;
+  color: rgba(221, 255, 252, 0.89);
+  cursor: pointer;
+  text-align: end;
+  margin-left: 2rem;
+  padding-left: 2rem;
+  font-weight: bold;
+}
+
+.salir:hover {
+  border-radius: 1.3rem;
+  color: rgba(66, 131, 126, 0.89);
+}

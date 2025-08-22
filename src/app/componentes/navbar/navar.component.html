@@ -1,0 +1,12 @@
+<nav class="navbar">
+  <img src="/logo.png" alt="Logo" routerLink="/dashboard" class="logo" style="width: 50px; height: 50px; margin-left: 1rem; cursor: pointer;"/>
+  <div class="lista">
+    <p mat-button routerLink="/mas-populares" class="btn-nav-sub">Mas populares</p>
+    <p mat-button routerLink="/mas-descargados" class="btn-nav-sub">Mas descargados</p>
+    <p mat-button routerLink="/proximamente" class="btn-nav-sub">Proximamente</p>
+    <p mat-button routerLink="/juegos-agregados" class="btn-nav-sub" >Agregar</p>
+
+    <p (click)="logout()" class="salir">Salir</p>
+  </div>
+
+</nav>
